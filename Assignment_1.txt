@@ -1,0 +1,325 @@
+Assignment_1
+
+
+=============================================================================================================================
+
+Q1. Explore the following commands with various options, refer man pages for 
+    further help
+	a) date 
+	===============================================
+	b) cal :
+	 ANS:cal => show calendar
+         cal jan 2020
+     =============================================
+	c) bc :
+	 ANS:
+	  is basic calculator in linux. after typing this command one can do basic
+      calculator operations.
+	=============================================================================
+	d) echo :
+	 ANS:
+	 echo command in linux is used to display line of text/string that are passed as an
+     argument .
+     1. \b  : it removes all the spaces in between the text
+     2. \c : suppress trailing new line with backspace interpreter
+     3. \n : this option creates new line from where it is used.
+     4. \t : this option is used to create horizontal tab spaces.
+     5. \r : carriage return with backspace interpreter ‘-e‘ to have specified carriage return in output.
+     6. \v : this option is used to create vertical tab spaces.
+     7. \a : alert return with backspace interpreter ‘-e‘ to have sound alert.
+     8. echo * : this command will print all files/folders, similar to ls command .
+     9. -n : this option is used to omit echoing trailing newline .
+	 ==========================================================================================
+	e) who: 
+	 ANS:
+	 The who command is used to get information about currently logged in user on to system.
+	 =========================================================================================
+	f) whoami :
+	 ANS:
+	 To display system’s username
+    ==========================================================================================
+	g) logname :
+	ANS:
+	 print user´s login name,Print the name of the current user.
+	 =======================================================================================
+	g) uname :
+	ANS:
+	 uname is a command-line utility that prints basic information about the 
+     operating system name and system hardware.
+	=======================================================================================
+	h)seq :
+	 ANS:
+	  seq command in Linux is used to generate numbers from FIRST to LAST in steps 
+	  of INCREMENT. It is a very useful command where we had to generate list of numbers 
+	  in while, for, until loop.
+	=======================================================================================
+
+	i) clear:
+	ANS:
+	   clear screen.
+=========================================================================================================================
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+	   in each directory respectively and then copy c directory into the a.
+	 ANS:
+     mkdir a b c
+     cd a
+     touch a.txt b.txt c.txt
+     cd (to come out of folder)
+     cd b
+     touch a.txt b.txt c.txt
+     Cd
+     cd c
+     touch a.txt b.txt c.txt
+     cp -r c a	 
+	============================================================== 
+	B)Move Directory b to c.
+	ANS:
+	   mv b c
+	===================================================================
+	C)Create alias of ls -lh command to your name.
+	ANS: 
+	   alias madhuri="ls -lh"
+	======================================================================
+	D)Change Directory name a to cdac.
+	 ANS:
+	   mv a cdac
+=================================================================================================
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	ANS:
+	   touch file1.txt file2.txt file3.txt file4.txt file5.txt
+       echo 'yamini'>> file1.txt file2.txt file3.txt file4.txt file5.txt  
+   ==========================================================================
+	B)Create file.txt using cat and edit that using nano editor.
+	ANS:
+	  cat file1.txt file2.txt file3.txt file4.txt file5.txt
+	=========================================================================
+	c)Create 5 empty files using touch command.
+	ANS:
+	 touch file1.txt file2.txt file3.txt file4.txt file5.txt
+	 ========================================================================
+    D)Remove previously created directory a , b and c.
+	ANS:
+	   rm -r c cdac a
+================================================================================================	   
+
+Q4. Create a file with some content using vi editor.
+ANS: 
+    vi testfile
+       i to insert text 
+      escape to leave insert
+      :wq to exit
+
+	a) Display the file using cat command.
+	ANS:cat testfile
+
+	b) Display line numbers along with content.
+	ANS:cat -n testfile
+
+	c) Display the file in reverse order using tac.
+	ANS:tac testfile
+
+	d) Combine multiple files using cat command
+  ANS:cat file1 file2 file3
+       
+========================================================================================================
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	ANS:
+	  column filename.txt
+
+	b) sort the files in ascending, descending order.
+	ANS:
+	   sort filename.txt
+       sort -r filename.txt
+
+	c) Create some hidden files and sub directories and display them using “ls -a”.
+	ANS: 
+	   mkdir .aa .bb .c.txt 
+       ls -a
+
+	d) Change time stamp of some files and directories using touch command
+ 	and display the files using ls -t ls -rt.
+	ANS:
+     touch -a file1.txt file2.txt
+     ls -t 
+     ls -rt
+
+	e) Recursive display contents of your home directory.
+	ANS:ls -r
+
+	f) display all attributes of files and directories using ls -l.
+	ANS:
+	    ls -l
+
+	g) display attributes of a directory using ls -ld.
+	ANS:
+	  ls -ld
+
+===========================================================================================
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+	 ANS:  mkdir madhuri
+           touch a.txt b.txt c.txt dtxt
+           chmod u-rwx madhuri
+		a)user can read and write the file a.txt and b.txt
+		ANS:chmod u+rw- bar
+        
+		b)user can write the file c.txt.
+		ANS: chmod +r--
+        
+	    c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+			ANS:
+			 chmod +x 
+================================================================================================			 
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+	ANS:
+	  chmod +x madhuri
+
+================================================================================================
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+	ANS:
+	 chmod -wx madhuri	
+================================================================================
+Q4. Use echo to list the all files of your home directory.
+   ANS:
+     echo * madhuri	
+==============================================================================
+Q5. Use echo to list the all files of /etc/ directory.
+ ANS:
+     echo * /etc/
+=====================================================================================
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+  ANS: 
+     find /etc -type f -name "*.conf"
+====================================================================================
+Q7. Use echo to append your name to a.txt
+    ANS:
+	 echo 'helloo' >> a.txt
+==================================================================================
+
+Note:Many operation might not work.Analyze them
+1.Create Three level nested directory a,b and c
+ ANS:
+    mkdir a
+    cd a
+    touch a.txt 
+    touch .hidden.txt
+	
+	a)Create at least one hidden file in each directory
+   ANS:
+      mkdir b
+      cd b
+      touch b.txt 
+      touch .hidden1.txt
+   b)Create at least one normal text file in each directory.
+   ANS:
+      mkdir c
+      touch c.txt 
+      touch .hidden2.txt
+  c)Copy c into a
+   ANS:
+	  cp -r  c a
+  d)Copy file inside a into b
+   ANS:
+     cp -r a/a.txt a/b
+     cp -r a/c/ a/b
+====================================================================================	 
+	 
+2.Change the third level directory c permission to read only
+  ANS:
+    chmod a=r c
+
+===========================================================================
+3.Try copying third level c directory to outside of a
+  ANS:
+   permission denied
+============================================================================
+4.Create the directory  “data“ inside b
+ ANS:
+    mkdir data
+===============================================================================
+5.Change the permission of b to read and write only
+ ANS:
+     chmod +rw b
+==============================================================================
+6.Create directory “data2”  inside b\
+ ANS:
+     mkdir data2
+==============================================================================
+7.Create data.txt file inside b
+ ANS:
+   touch data.txt
+==============================================================================
+8.Rename the second level directory c to copied_dir
+ ANS:
+    mv c copied_dir
+===============================================================================
+9.Change permission of copied_dir to only executable
+ ANS:
+    chmod +x copied_dir
+=================================================================================
+10.Try ls on copied_dir
+ ANS:
+    ls
+=================================================================================
+11.Try moving copied_dir to outside of a
+ ANS:
+    permission denied for hidden file,c.txt file
+==================================================================================
+12.Try moving data directory outside of a
+  ANS:
+      mv a/b/data/ a
+=================================================================================
+13.Now change the owner of the directory a to root
+ ANS:
+     sudo chmod
+=================================================================================
+14.Change permission of a to read write and executable to only user
+  ANS:
+      chmod o+rwx a
+==================================================================================
+15.Try creating directory sample inside a
+  ANS:
+    mkdir sample
+==================================================================================
+16.Create directory x outside a
+  ANS:
+      mkdir x
+==================================================================================
+17.Try moving x inside a
+ ANS:
+    mv  x a
+==================================================================================
+18.Create directory movies
+  ANS:
+     mkdir movies
+=================================================================================
+19.Change group of movies to sudo
+20.Change group of movies to avahi
+21.Try changing permission after changing ownership to root  
+   ANS:
+      chmod a=rwx a
+
+================================================================================  
+22.Try Changing permission after changing group to sudo without sudo
+23.Try Changing owner and group both to root
+24.Try changinging permission
+25.Try deleting the file
+ ANS:
+   rm b.txt
+==================================================================================================
+ 
+
+	
+	
